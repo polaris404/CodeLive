@@ -57,6 +57,9 @@
     height: 93vh;
 }
 
+.explore-btn{
+    position: relative;
+}
 /*#########################
         MAIN
 ##########################*/
@@ -144,7 +147,47 @@ main section{
 }
 /*Forms*/
 .form-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #fff, #80ffdb);
+    margin: 0;
+    justify-content: space-evenly;
+    width: 100%;
+    
+}
 
+.form-section h2{
+    color: #336658;
+    font-size: 3rem;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}
+.form div{
+    padding: 1rem 15rem;
+    line-height: 2.5rem;
+}
+.form div div{
+    margin: 0;
+    padding: 0;
+}
+.form .radio:last-child{
+    grid-column: 1 / span 2;
+}
+.form .radio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    justify-content: left;
+    padding: 0;
+}
+.form input[type = "text"], input[type="email"], input[type="url"]{
+    width: 40rem;
+    height: 5rem;
 }
 /*#########################
         FOOTER

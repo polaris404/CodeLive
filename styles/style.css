@@ -4,6 +4,7 @@
     box-sizing: border-box;
   }
   
+  
   html {
     /* default font-size = 16px */
     /* default font-size we want for easy calculation = 10px */
@@ -13,6 +14,8 @@
     /* Now we can use rem for easy scalability */
     overflow-x: hidden;
     scroll-behavior: smooth;
+    scrollbar-width: 8px;          /* "auto" or "thin" */
+    scrollbar-color: #336658 #fff;   /* scroll thumb and track */
   }
   
   body {
@@ -22,11 +25,27 @@
     font-weight: 400;
     color: #555;
     font-family: "Rubik", sans-serif;
+    
+
   
     /* Only works if there is nothing absolutely positioned in relation to body */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
+  body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #fff;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #336658;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #fff;  /* creates padding around scroll thumb */
+  }
+  
 /*#########################
         HEADER
 ##########################*/
@@ -61,6 +80,11 @@
     position: absolute;
     bottom: 10rem;
     left: 49%;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 1.8rem 2rem;
+    border: 2px solid green;
+    border-radius: 1rem;
 }
 /*#########################
         MAIN
@@ -189,6 +213,20 @@ main section{
 .form input[type = "text"], input[type="email"], input[type="url"]{
     width: 40rem;
     height: 5rem;
+}
+
+form button{
+    padding: 1rem 1.5rem;
+    border: 2px solid #336658;
+    border-radius: 1rem;
+    background-color: #b3ffe9;
+    color: #336658;
+    font-weight: 700;
+}
+form button:hover{
+    color: #b3ffe9;
+    background-color: #336658;
+    border-color: #b3ffe9;
 }
 /*#########################
         FOOTER
